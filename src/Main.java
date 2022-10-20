@@ -41,7 +41,17 @@ public class Main {
         Menu<Pasta> pastaMenu = new Menu<>(pastasList);
         System.out.println(pastaMenu);
 
-
+     List<SecondiPiatti> secondiPiatti = new ArrayList<>();
+     SecondiPiatti tagliataDiManzo = new SecondiPiatti("Tagliata di Manzo",19,"Carne di manzo",false);
+     SecondiPiatti trippaAllaRomana = new SecondiPiatti("Trippa alla Romana", 15,"Ventre di mucca",true);
+     SecondiPiatti grigliataMista = new SecondiPiatti("Grigliata Mista",22,"Tipi di carne diff.", false);
+     SecondiPiatti tartareDiAngus = new SecondiPiatti("Tartare di Angus",25,"Carne frollata",false);
+     secondiPiatti.add(tagliataDiManzo);
+     secondiPiatti.add(trippaAllaRomana);
+     secondiPiatti.add(grigliataMista);
+     secondiPiatti.add(tartareDiAngus);
+     Menu<SecondiPiatti> secondiPiattiMenu = new Menu<>(secondiPiatti);
+        System.out.println(secondiPiattiMenu);
 
     }
 }
