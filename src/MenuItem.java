@@ -4,13 +4,13 @@ public abstract class MenuItem {
     private int price;
     private String name;
     private String type;
-    private boolean isReccomended;
+    private boolean isRecommended;
 
-    public MenuItem(String name, int price,String type,boolean isReccomended) {
+    public MenuItem(String name, int price,String type,boolean isRecommended) {
         this.name = name;
         this.price = price;
         this.type = type;
-        this.isReccomended = isReccomended;
+        this.isRecommended = isRecommended;
     }
 
     public int getPrice() {
@@ -37,12 +37,12 @@ public abstract class MenuItem {
     }
     public void printDetails(){}
 
-    public boolean isReccomended() {
-        return isReccomended;
+    public boolean isRecommended() {
+        return isRecommended;
     }
 
-    public void setReccomended(boolean reccomended) {
-        isReccomended = reccomended;
+    public void setRecommended(boolean recommended) {
+        isRecommended = recommended;
     }
 }
 

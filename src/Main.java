@@ -24,8 +24,8 @@ public class Main {
         beer.printDetails();
 
         for (MenuItem item: drinkList) {
-            if(item.isReccomended()){
-                System.out.println("Our reccomended drink is " + item.getName()+item.getPrice() + " euros");
+            if(item.isRecommended()){
+                System.out.println("Our recommended drink is " + item.getName()+item.getPrice() + " euros");
             }
         }
     }

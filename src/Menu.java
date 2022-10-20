@@ -10,7 +10,6 @@ public class Menu<T extends MenuItem> {
     @Override
     public String toString() {
         return "Restaurant Menu = " +
-                itemList +
                 this.getItemList();
     }
     public Menu(List<T> itemList) {
