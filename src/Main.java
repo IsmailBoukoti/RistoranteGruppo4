@@ -21,12 +21,39 @@ public class Main {
         Menu<Drink> drinksMenu = new Menu<>(drinkList);
 
         System.out.println(drinksMenu);
-        beer.printDetails();
 
         for (MenuItem item: drinkList) {
             if(item.isRecommended()){
                 System.out.println("Our recommended drink is " + item.getName()+item.getPrice() + " euros");
             }
         }
-    }
-}
+
+        System.out.println();
+        System.out.println("---------Ours side dishes are: ");
+
+        List<SideDishes> sideDishesList = new ArrayList<>();
+
+        SideDishes chips = new SideDishes("Chips",3.5,"Side dishes",false);
+        SideDishes ovenPotatoes = new SideDishes("Oven potatoes",4,"Side dishes",false);
+        SideDishes salad = new SideDishes("Salad",3,"Side dishes",false);
+        SideDishes potatoCroquettes = new SideDishes("Potato Croquettes",4.5,"Side dishes",false);
+        SideDishes grilledVegetable = new SideDishes("Grilled vegetable",4.5,"Side dishes",true);
+
+        sideDishesList.add(chips);
+        sideDishesList.add(ovenPotatoes);
+        sideDishesList.add(salad);
+        sideDishesList.add(potatoCroquettes);
+        sideDishesList.add(grilledVegetable);
+
+        Menu<SideDishes> sideDishesMenu = new Menu<>(sideDishesList);
+
+        System.out.println(sideDishesMenu);
+
+        for (MenuItem sd:sideDishesList
+             ) {   if(sd.isRecommended()){
+            System.out.println("Our recommended side dish is " + sd.getName()+ " "+sd.getPrice() + " euros");
+        }
+
+        }
+
+}}
