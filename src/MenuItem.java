@@ -1,19 +1,19 @@
 
 public abstract class MenuItem {
 
-    private int price;
+    private double price;
     private String name;
     private String type;
     private boolean isRecommended;
 
-    public MenuItem(String name, int price,String type,boolean isRecommended) {
+    public MenuItem(String name, double price, String type, boolean isRecommended) {
         this.name = name;
         this.price = price;
         this.type = type;
         this.isRecommended = isRecommended;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
