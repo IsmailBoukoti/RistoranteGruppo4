@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Welcome to our restaurant Gusti Antichi");
-
-        List<Drink>drinkList = new ArrayList<>();
+        Menu menu = new Menu(new ArrayList<>());
+        List<MenuItem>drinkList = new ArrayList<>();
 
         Drink beer = new Drink("Beer", 5,"Drink",false);
         Drink redWhine = new Drink("Red whine ", 8,"Drink", true);
@@ -17,11 +17,6 @@ public class Main {
         drinkList.add(redWhine);
         drinkList.add(cocaCola);
         drinkList.add(water);
-
-        Menu<Drink> drinksMenu = new Menu<>(drinkList);
-
-        System.out.println(drinksMenu);
-        beer.printDetails();
         menu.addListToMenu(drinkList);
 
         List<MenuItem> pastasList = new ArrayList<>();
