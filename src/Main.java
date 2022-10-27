@@ -1,21 +1,27 @@
 import java.util.ArrayList;
 import java.util.List;
+
 public class Main {
+
     public static void main(String[] args) {
 
-        System.out.println("Welcome to our restaurant Antichi sapori");
-        List<MenuItem> itemList = new ArrayList<>();
-        Menu menu = new Menu (itemList);
+        System.out.println("Welcome to our restaurant Gusti Antichi");
 
-        List<MenuItem> drinkList = new ArrayList<>();
-        Drink beer = new Drink("Beer", 5, "Drink", false);
-        Drink redWhine = new Drink("Red whine ", 8, "Drink", true);
-        Drink cocaCola = new Drink("Cocacola", 3, "Drink", false);
-        Drink water = new Drink("Water", 2, "Drink", false);
+        List<Drink>drinkList = new ArrayList<>();
+
+        Drink beer = new Drink("Beer", 5,"Drink",false);
+        Drink redWhine = new Drink("Red whine ", 8,"Drink", true);
+        Drink cocaCola = new Drink("Cocacola",3,"Drink", false);
+        Drink water = new Drink("Water",2,"Drink", false);
         drinkList.add(beer);
         drinkList.add(redWhine);
         drinkList.add(cocaCola);
         drinkList.add(water);
+
+        Menu<Drink> drinksMenu = new Menu<>(drinkList);
+
+        System.out.println(drinksMenu);
+        beer.printDetails();
         menu.addListToMenu(drinkList);
 
         List<MenuItem> pastasList = new ArrayList<>();
