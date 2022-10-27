@@ -1,4 +1,5 @@
 public class Drink extends MenuItem {
+
     public Drink(String name, int price,String type,boolean isRecommended) {
         super(name, price, type,isRecommended);
     }

@@ -1,5 +1,5 @@
 import java.util.List;
-public class Menu {
+public class Menu{
 
     private final List<MenuItem> itemList;
     public Menu(List<MenuItem> itemList) {
