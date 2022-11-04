@@ -1,7 +1,9 @@
+package it.restaurant.food;
+
 import java.util.List;
 public class Menu{
 
-    private final List<MenuItem> itemList;
+    public final List<MenuItem> itemList;
     public Menu(List<MenuItem> itemList) {
         this.itemList = itemList;
     }
@@ -16,8 +18,7 @@ public class Menu{
     public String toString() {
         String name = "Antichi Sapori ";
         String menuType = "Menu di carne";
-        return "Menu{" +
-                "name='" + name + '\'' +
+        return  "name='" + name + '\'' +
                 ", menuType='" + menuType + '\'' +
                 ", itemList=" + itemList +
                 '}';
