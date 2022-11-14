@@ -17,7 +17,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Welcome to our restaurant Le Antichi Sapori");
+        System.out.println("Welcome to our restaurant Antichi Sapori");
         System.out.println();
         Restaurant restaurant = Restaurant.getInstance();
         Menu menu = new Menu(new ArrayList<>());
@@ -75,7 +75,7 @@ public class Main {
         System.out.println("For how many do you book or for how many people is the table?");
         System.out.println();
 
-        Customers customer1 = new Customers("Gianni", "Agnelli", CustomerTypeEnum.NORMAL);
+        Customers customer1 = new Customers("Gianni", "Agnelli", CustomerTypeEnum.CLASSIC);
         Customers customer2 = new Customers("Giulia", CustomerTypeEnum.VEGETARIAN);
         Customers customer3 = new Customers("Andrea", CustomerTypeEnum.CHILD);
 
@@ -117,6 +117,7 @@ public class Main {
 
         restaurant.cleanTable(table2,customer2);
 
+        System.out.println(customer1.printDetails());
 
     }
 }

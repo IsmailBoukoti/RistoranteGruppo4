@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e353b95-351a-4290-b28a-4f95d033e238" name="Changes" comment="Refactoring and fixing repo">
-      <change afterPath="$PROJECT_DIR$/NuovoRistoranteGruppo4" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/NuovoRistoranteGruppo4.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MenuItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/customers/CustomerTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/customers/CustomerTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/customers/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/customers/Customers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,27 +51,12 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/trita/Documents/Develhope/NuovoRistoranteGruppo4/NuovoRistoranteGruppo4.iml&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/axelf/OneDrive/Desktop/NuovoRistoranteGruppo4&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="NuovoRistoranteGruppo4" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="NuovoRistoranteGruppo4" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

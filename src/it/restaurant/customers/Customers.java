@@ -24,13 +24,12 @@ public class Customers{
         numberOfCustomers += 1;
     }
 
-    @Override
-    public String toString(){
-        return "Customers{" +
-                "type=" + type +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                '}';
+
+    public String printDetails(){
+        return "Customer: " +
+                "type " + type +
+                ", name " + name  +
+                ", surname " + surname ;
     }
 
 
@@ -83,16 +82,16 @@ public class Customers{
             case VEGETARIAN:
                 for ( MenuItem menu1:menu.itemList) {
                     if (menu1.getType().equals(MenuTypeEnum.MENU_VEGETARIAN)) {
-                        System.out.println(menu1);}}
+                        menu1.printDetails();}}
                 break;
             case CHILD:
                 for (  MenuItem menu1:menu.itemList) {
                     if (( menu1.getType() == MenuTypeEnum.MENU_CHILDREN )) {
-                        System.out.println(menu1);}}
+                        menu1.printDetails();}}
                 break;
-            case NORMAL:
+            case CLASSIC:
                 for ( MenuItem menu1:menu.itemList) {
-                    System.out.println(menu1);}
+                    menu1.printDetails();}
                 break;
             default:
                 System.out.println("you written wrong");

@@ -3,6 +3,6 @@ package it.restaurant.customers;
 public enum CustomerTypeEnum{
 
     VEGETARIAN,
-    NORMAL,
+    CLASSIC,
     CHILD
 }
