@@ -46,16 +46,16 @@ public class Main {
         pastasList.add(polpette);
         menu.addListToMenu(pastasList);
 
-        List<MenuItem> secondiPiatti = new ArrayList<>();
-        SecondiPiatti tagliataDiManzo = new SecondiPiatti("Tagliata di Manzo", 19, MenuTypeEnum.MENU_CLASSIC, false, "beef");
-        SecondiPiatti trippaAllaRomana = new SecondiPiatti("Trippa alla Romana", 15, MenuTypeEnum.MENU_CLASSIC, true, "trippa");
-        SecondiPiatti grigliataMista = new SecondiPiatti("Grigliata Mista", 22, MenuTypeEnum.MENU_CLASSIC, false, "beef,pork");
-        SecondiPiatti tartareDiAngus = new SecondiPiatti("Tartare di Angus", 25, MenuTypeEnum.MENU_CLASSIC, false, "angus");
-        secondiPiatti.add(tagliataDiManzo);
-        secondiPiatti.add(trippaAllaRomana);
-        secondiPiatti.add(grigliataMista);
-        secondiPiatti.add(tartareDiAngus);
-        menu.addListToMenu(secondiPiatti);
+        List<MenuItem> mainDish = new ArrayList<>();
+        MainDish tagliataDiManzo = new MainDish("Tagliata di Manzo", 19, MenuTypeEnum.MENU_CLASSIC, false, "beef");
+        MainDish trippaAllaRomana = new MainDish("Trippa alla Romana", 15, MenuTypeEnum.MENU_CLASSIC, true, "trippa");
+        MainDish grigliataMista = new MainDish("Grigliata Mista", 22, MenuTypeEnum.MENU_CLASSIC, false, "beef,pork");
+        MainDish tartareDiAngus = new MainDish("Tartare di Angus", 25, MenuTypeEnum.MENU_CLASSIC, false, "angus");
+        mainDish.add(tagliataDiManzo);
+        mainDish.add(trippaAllaRomana);
+        mainDish.add(grigliataMista);
+        mainDish.add(tartareDiAngus);
+        menu.addListToMenu(mainDish);
 
         List<MenuItem> sideDishesList = new ArrayList<>();
         SideDishes chips = new SideDishes("Chips", 3.5, MenuTypeEnum.MENU_CHILDREN, false, "potatoes");
@@ -105,21 +105,6 @@ public class Main {
             }
 
 
-        /*for (it.restaurant.food.MenuItem item : secondiPiatti) {
-            if (item.isRecommended()) {
-                System.out.println("Our recommended meat is " + item.getName() + " " + item.getPrice() + " euros");
-            }
-        }
-        for (it.restaurant.food.MenuItem sd : sideDishesList) {
-            if (sd.isRecommended()) {
-                System.out.println("Our recommended side dish is " + sd.getName() + " " + sd.getPrice() + " euros");
-            }
-        }
-        for (it.restaurant.food.MenuItem item : drinkList) {
-            if (item.isRecommended()) {
-                System.out.println("Our recommended drink is " + item.getName() + item.getPrice() + " euros");
-            }
-        }*/
         }
 
         Table table1 = new Table("Tavolo 1", TableStateEnum.FREE );

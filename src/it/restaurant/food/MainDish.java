@@ -1,12 +1,12 @@
 package it.restaurant.food;
 
-public class Drink extends MenuItem{
+public class MainDish extends MenuItem{
 
 
-
-    public Drink(String name, double price, MenuTypeEnum type, boolean isRecommended, String stringOfIngredients){
+    public MainDish (String name, double price, MenuTypeEnum type, boolean isRecommended, String stringOfIngredients){
         super(name, price, type, isRecommended, stringOfIngredients);
     }
+
 
 
     public void printDetails(){
