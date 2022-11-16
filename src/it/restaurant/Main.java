@@ -3,8 +3,8 @@ package it.restaurant;
 import it.restaurant.RestaurantTableReservation.Restaurant;
 import it.restaurant.RestaurantTableReservation.Table;
 import it.restaurant.RestaurantTableReservation.TableStateEnum;
-import it.restaurant.customers.CustomerTypeEnum;
-import it.restaurant.customers.Customers;
+import it.restaurant.customer.CustomerTypeEnum;
+import it.restaurant.customer.Customer;
 import it.restaurant.food.*;
 import it.restaurant.food.Menu;
 import it.restaurant.food.MenuItem;
@@ -75,14 +75,14 @@ public class Main {
         System.out.println("For how many do you book or for how many people is the table?");
         System.out.println();
 
-        Customers customer1 = new Customers("Gianni", "Agnelli", CustomerTypeEnum.CLASSIC);
-        Customers customer2 = new Customers("Giulia", CustomerTypeEnum.VEGETARIAN);
-        Customers customer3 = new Customers("Andrea", CustomerTypeEnum.CHILD);
+        Customer customer1 = new Customer("Gianni", "Agnelli", CustomerTypeEnum.CLASSIC);
+        Customer customer2 = new Customer("Giulia", CustomerTypeEnum.VEGETARIAN);
+        Customer customer3 = new Customer("Andrea", CustomerTypeEnum.CHILD);
 
-        Customers.printNumberOfCustomers();
+        Customer.getNumberOfCustomers();
         System.out.println();
 
-        List<Customers> customers = new ArrayList<>();
+        List<Customer> customers = new ArrayList<>();
         customers.add(customer1);
         customers.add(customer2);
         customers.add(customer3);
@@ -92,7 +92,7 @@ public class Main {
 
         //Loop for assign each menu type to each type of customer
 
-        for (Customers customer : customers) {
+        for (Customer customer : customers) {
             customer.printMenuTypeByCustomerType(customer, menu);
         }
 

@@ -1,4 +1,4 @@
-package it.restaurant.customers;
+package it.restaurant.customer;
 
 public enum CustomerTypeEnum{
 
