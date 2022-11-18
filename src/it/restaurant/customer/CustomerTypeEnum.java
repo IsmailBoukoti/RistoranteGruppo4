@@ -4,5 +4,6 @@ public enum CustomerTypeEnum{
 
     VEGETARIAN,
     CLASSIC,
-    CHILD
+    CHILD;
+
 }
