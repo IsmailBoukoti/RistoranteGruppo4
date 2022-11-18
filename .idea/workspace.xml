@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e353b95-351a-4290-b28a-4f95d033e238" name="Changes" comment="Refactoring and fixing repo">
-      <change afterPath="$PROJECT_DIR$/NuovoRistoranteGruppo4.iml" afterDir="false" />
+    <list default="true" id="3e353b95-351a-4290-b28a-4f95d033e238" name="Changes" comment="Created method recommendedDish changed the constructor in MenuItem&#10;for take another type and improve the method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MenuItem.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/customers/CustomerTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/customers/CustomerTypeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/customers/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/customers/Customers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/customer/CustomerTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/customer/CustomerTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/food/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/food/Drink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/food/MainDish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/food/MainDish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/food/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/food/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/food/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/food/MenuItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/food/MenuTypeEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/food/Pasta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/food/Pasta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/food/SideDishes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/food/SideDishes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="FeatureSideDishes" />
+        <entry key="$PROJECT_DIR$" value="FeatMethod" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,7 +92,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="develop" />
+                        <option value="FeatMethod" />
                       </list>
                     </value>
                   </entry>
