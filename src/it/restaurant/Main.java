@@ -9,7 +9,6 @@ import it.restaurant.food.*;
 import it.restaurant.food.Menu;
 import it.restaurant.food.MenuItem;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,10 +38,14 @@ public class Main {
         Pasta carbonara = new Pasta("Spaghetti alla Carbonara", 12,CustomerTypeEnum.CLASSIC ,false, "bacon");
         Pasta piemontese = new Pasta("Agnolotti alla Piemontese", 9,CustomerTypeEnum.VEGETARIAN, false, "agnolotti");
         Pasta polpette = new Pasta("Spaghetti alle Polpette", 8,CustomerTypeEnum.CHILD ,false, "meatballs");
+        Pasta amatriciana = new Pasta("Bucatini alla Matriciana", 10,CustomerTypeEnum.CLASSIC,false,"Guanciale");
+        Pasta pesto = new Pasta("Penne al Pesto",9, CustomerTypeEnum.CHILD,false,"Basilico");
         pastasList.add(ragu);
         pastasList.add(carbonara);
         pastasList.add(piemontese);
         pastasList.add(polpette);
+        pastasList.add(amatriciana);
+        pastasList.add(pesto);
         menu.addListToMenu(pastasList);
 
         List<MenuItem> mainDish = new ArrayList<>();
@@ -50,23 +53,29 @@ public class Main {
         MainDish trippaAllaRomana = new MainDish("Trippa alla Romana", 15,CustomerTypeEnum.CLASSIC ,true, "trippa");
         MainDish grigliataMista = new MainDish("Grigliata Mista", 22,CustomerTypeEnum.CLASSIC ,false, "beef,pork");
         MainDish tartareDiAngus = new MainDish("Tartare di Angus", 25,CustomerTypeEnum.CLASSIC ,false, "angus");
+        MainDish stincoDiMaiale = new MainDish("Stinco di Maiale",17,CustomerTypeEnum.CLASSIC,false,"maiale");
+        MainDish polloAllaCacciatora = new MainDish("Pollo alla Cacciatora",15,CustomerTypeEnum.CHILD,false,"pollo");
         mainDish.add(tagliataDiManzo);
         mainDish.add(trippaAllaRomana);
         mainDish.add(grigliataMista);
         mainDish.add(tartareDiAngus);
+        mainDish.add(stincoDiMaiale);
+        mainDish.add(polloAllaCacciatora);
         menu.addListToMenu(mainDish);
 
         List<MenuItem> sideDishesList = new ArrayList<>();
-        SideDishes chips = new SideDishes("Chips", 3.5,CustomerTypeEnum.VEGETARIAN ,CustomerTypeEnum.CHILD,false, "potato");
-        SideDishes ovenPotatoes = new SideDishes("Oven potatoes", 4,CustomerTypeEnum.VEGETARIAN ,CustomerTypeEnum.CHILD,false, "potatoes");
-        SideDishes salad = new SideDishes("Salad", 3,CustomerTypeEnum.VEGETARIAN, false, "salad");
-        SideDishes potatoCroquettes = new SideDishes("Potato Croquettes", 4.5,CustomerTypeEnum.VEGETARIAN ,CustomerTypeEnum.CHILD,false, "salt");
-        SideDishes grilledVegetable = new SideDishes("Grilled vegetable", 4.5,CustomerTypeEnum.VEGETARIAN, true, "vegetable");
+        SideDish chips = new SideDish("Chips", 3.5,CustomerTypeEnum.VEGETARIAN ,CustomerTypeEnum.CHILD,false, "potato");
+        SideDish ovenPotatoes = new SideDish("Oven potatoes", 4,CustomerTypeEnum.VEGETARIAN ,CustomerTypeEnum.CHILD,false, "potatoes");
+        SideDish salad = new SideDish("Salad", 3,CustomerTypeEnum.VEGETARIAN, false, "salad");
+        SideDish potatoCroquettes = new SideDish("Potato Croquettes", 4.5,CustomerTypeEnum.VEGETARIAN ,CustomerTypeEnum.CHILD,false, "salt");
+        SideDish grilledVegetable = new SideDish("Grilled vegetable", 4.5,CustomerTypeEnum.VEGETARIAN, true, "vegetable");
+        SideDish insalataOlivier = new SideDish("Insalata Olivier",5.5,CustomerTypeEnum.CHILD,false,"potatos and peas");
         sideDishesList.add(chips);
         sideDishesList.add(ovenPotatoes);
         sideDishesList.add(salad);
         sideDishesList.add(potatoCroquettes);
         sideDishesList.add(grilledVegetable);
+        sideDishesList.add(insalataOlivier);
         menu.addListToMenu(sideDishesList);
 
         //Creation Customers
