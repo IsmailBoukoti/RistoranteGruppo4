@@ -93,7 +93,7 @@ public class Menu{
     public void printRecommendedDishes(){
         for (MenuItem item : itemList){
             if(item.isRecommended()){
-                System.out.println("From our recommended "+item.getType1()+" is "+item.getName()+" "+item.getPrice()+" euros");
+                System.out.println("Our recommended "+item.getType1()+" dish is "+item.getName()+" "+item.getPrice()+" euros");
             }
         }
     }

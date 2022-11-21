@@ -112,6 +112,11 @@ public class Main {
 
         restaurant.cleanTable(table2,customer2);
 
+        System.out.println("Situazione attuale dei tavoli occupati e dei clienti che stanno consumando");
+
+        restaurant.getMyRestaurant().forEach((table,customer)-> System.out.println(table.getName() + " is " + table.getTableState().toString().toLowerCase() + " by "+ customer.getDetails().toLowerCase()));
+
+
     }
 }
 
