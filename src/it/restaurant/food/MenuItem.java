@@ -1,33 +1,24 @@
 package it.restaurant.food;
 
-import it.restaurant.customer.CustomerTypeEnum;
+import java.util.ArrayList;
+import java.util.Arrays;
 
-public abstract class MenuItem{
+public class MenuItem{
 
 
     private String name;
 
     private double price;
 
-    private CustomerTypeEnum type1;
-    private CustomerTypeEnum type2;
+    private ArrayList<MenuTypeEnum> type1;
+    private MenuTypeEnum type2;
     private boolean isRecommended;
     private String stringOfIngredients;
 
-
-    public MenuItem(String name,double price,CustomerTypeEnum type1,boolean isRecommended,String stringOfIngredients){
+    public MenuItem(String name, double price, ArrayList<MenuTypeEnum> menuTypeEnum, boolean isRecommended, String stringOfIngredients){
         this.name = name;
         this.price = price;
-        this.type1 = type1;
-        this.isRecommended = isRecommended;
-        this.stringOfIngredients = stringOfIngredients;
-    }
-
-    public MenuItem(String name,double price,CustomerTypeEnum type1,CustomerTypeEnum type2,boolean isRecommended,String stringOfIngredients){
-        this.name = name;
-        this.price = price;
-        this.type1 = type1;
-        this.type2 = type2;
+        this.type1 = menuTypeEnum;
         this.isRecommended = isRecommended;
         this.stringOfIngredients = stringOfIngredients;
     }
@@ -48,19 +39,19 @@ public abstract class MenuItem{
         this.price = price;
     }
 
-    public CustomerTypeEnum getType1(){
+    public ArrayList<MenuTypeEnum> getType1() {
         return type1;
     }
 
-    public void setType1(CustomerTypeEnum type1){
+    public void setType1(ArrayList<MenuTypeEnum> type1) {
         this.type1 = type1;
     }
 
-    public CustomerTypeEnum getType2(){
+    public MenuTypeEnum getType2(){
         return type2;
     }
 
-    public void setType2(CustomerTypeEnum type2){
+    public void setType2(MenuTypeEnum type2){
         this.type2 = type2;
     }
 
