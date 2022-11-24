@@ -1,17 +1,17 @@
 package it.restaurant.food;
 
+
+import java.util.List;
+
 public class MainDish extends MenuItem{
 
-    public MainDish(String name, double price, MenuTypeEnum type1, boolean isRecommended, String stringOfIngredients){
-        super(name,price,type1,isRecommended,stringOfIngredients);
-    }
 
-    public MainDish(String name, double price, MenuTypeEnum type1, MenuTypeEnum type2, boolean isRecommended, String stringOfIngredients){
-        super(name,price,type1,type2,isRecommended,stringOfIngredients);
+    public MainDish(String name,double price,List<MenuTypeEnum> type,boolean isRecommended,String stringOfIngredients){
+        super(name,price,type,isRecommended,stringOfIngredients);
     }
 
     @Override
-    public String printDetails(){
-        return super.printDetails();
+    public String getDetails(){
+        return super.getDetails();
     }
 }

@@ -1,7 +1,6 @@
 package it.restaurant.food;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 
 public class MenuItem{
 
@@ -10,15 +9,14 @@ public class MenuItem{
 
     private double price;
 
-    private ArrayList<MenuTypeEnum> type1;
-    private MenuTypeEnum type2;
+    private List<MenuTypeEnum> type;
     private boolean isRecommended;
     private String stringOfIngredients;
 
-    public MenuItem(String name, double price, ArrayList<MenuTypeEnum> menuTypeEnum, boolean isRecommended, String stringOfIngredients){
+    public MenuItem(String name,double price,List<MenuTypeEnum> type,boolean isRecommended,String stringOfIngredients){
         this.name = name;
         this.price = price;
-        this.type1 = menuTypeEnum;
+        this.type = type;
         this.isRecommended = isRecommended;
         this.stringOfIngredients = stringOfIngredients;
     }
@@ -39,20 +37,12 @@ public class MenuItem{
         this.price = price;
     }
 
-    public ArrayList<MenuTypeEnum> getType1() {
-        return type1;
+    public List<MenuTypeEnum> getType(){
+        return type;
     }
 
-    public void setType1(ArrayList<MenuTypeEnum> type1) {
-        this.type1 = type1;
-    }
-
-    public MenuTypeEnum getType2(){
-        return type2;
-    }
-
-    public void setType2(MenuTypeEnum type2){
-        this.type2 = type2;
+    public void setType(List<MenuTypeEnum> type){
+        this.type = type;
     }
 
     public String getStringOfIngredients(){
@@ -71,8 +61,8 @@ public class MenuItem{
         isRecommended = recommended;
     }
 
-    public String printDetails(){
-        return name+" price: "+price+" euro for: "+type1+" Ingredients: "+stringOfIngredients;
+    public String getDetails(){
+        return name+" price: "+price+" euro for: "+type+" Ingredients: "+stringOfIngredients;
     }
 }
 

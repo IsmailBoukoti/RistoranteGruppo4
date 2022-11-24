@@ -3,6 +3,8 @@ package it.restaurant.customer;
 
 import it.restaurant.food.MenuTypeEnum;
 
+import java.util.List;
+
 public class Customer {
 
     private MenuTypeEnum type;
@@ -20,7 +22,7 @@ public class Customer {
         this.surname = surname;
     }
 
-public String getDetails(){if(surname != null){return name +" "+ surname +" "+ " (" + type+ ")";}else{return name+" "+ "(" + type + ")";}}
+    public String getDetails(){if(surname != null){return name +" "+ surname +" "+ " (" + type+ ")";}else{return name+" "+ "(" + type + ")";}}
 
 
 
