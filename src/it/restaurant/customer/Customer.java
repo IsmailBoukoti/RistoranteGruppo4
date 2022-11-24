@@ -20,7 +20,13 @@ public class Customer {
         this.surname = surname;
     }
 
-public String getDetails(){if(surname != null){return name +" "+ surname +" "+ " (" + type+ ")";}else{return name+" "+ "(" + type + ")";}}
+    public String getDetails() {
+        if (surname != null) {
+            return name + " " + surname + " (" + type + ")";
+        } else {
+            return name + " " + "(" + type + ")";
+        }
+    }
 
 
 

@@ -1,5 +1,6 @@
 package it.restaurant;
 
+import it.restaurant.RestaurantTableReservation.Reservation;
 import it.restaurant.RestaurantTableReservation.Restaurant;
 import it.restaurant.RestaurantTableReservation.Table;
 import it.restaurant.RestaurantTableReservation.TableStateEnum;
@@ -23,7 +24,7 @@ public class Main {
 
         //Creation Menu
 
-        Drink beer = new Drink("Beer", 5, MenuTypeEnum.VEGETARIAN,false, "malt");
+        /*Drink beer = new Drink("Beer", 5, MenuTypeEnum.VEGETARIAN,false, "malt");
         Drink redWhine = new Drink("Red whine ", 8, MenuTypeEnum.VEGETARIAN, true, "grape");
         Drink cocaCola = new Drink("Cocacola", 3, MenuTypeEnum.VEGETARIAN,false, "sugar");
         Drink water = new Drink("Water", 2, MenuTypeEnum.VEGETARIAN, false, "water");
@@ -31,9 +32,9 @@ public class Main {
         drinkList.add(redWhine);
         drinkList.add(cocaCola);
         drinkList.add(water);
-        menu.addListToMenu(drinkList);
+        menu.addListToMenu(drinkList);*/
 
-        List<MenuItem> pastasList = new ArrayList<>();
+       /* List<MenuItem> pastasList = new ArrayList<>();
         Pasta ragu = new Pasta("Rigatoni al ragu", 10, MenuTypeEnum.CLASSIC, MenuTypeEnum.CHILD,true, "pasta");
         Pasta carbonara = new Pasta("Spaghetti alla Carbonara", 12, MenuTypeEnum.CLASSIC ,false, "bacon");
         Pasta piemontese = new Pasta("Agnolotti alla Piemontese", 9, MenuTypeEnum.VEGETARIAN, false, "agnolotti");
@@ -77,7 +78,7 @@ public class Main {
         sideDishesList.add(grilledVegetable);
         sideDishesList.add(insalataOlivier);
         menu.addListToMenu(sideDishesList);
-
+*/
         //Creation Customers
 
         Customer customer1 = new Customer("Gianni", "Agnelli", MenuTypeEnum.CLASSIC);
@@ -85,16 +86,18 @@ public class Main {
         Customer customer3 = new Customer("Andrea", MenuTypeEnum.CHILD);
 
 
-        List<Customer> customers = new ArrayList<>();
-        customers.add(customer1);
-        customers.add(customer2);
-        customers.add(customer3);
+        Reservation reservation1 = new Reservation("x5648");
+       // Reservation reservation2 = new Reservation("x564841");
+
+        reservation1.addCustomerToReservation(customer1);
+        reservation1.addCustomerToReservation(customer2);
+        reservation1.addCustomerToReservation(customer3);
 
         System.out.println("------------------And here the menu--------------");
 
         //Loop for assign each menu type to each type of customer with a method but if you want you can print the menu
         //That you want for example menu.printVegetarianMenu(menu);
-        customers.forEach(customer -> {menu.printMenuTypeByCustomerType(customer,menu);});
+       // customer.forEach(customer -> {menu.printMenuTypeByCustomerType(customer,menu);});
 
         System.out.println("------------Recommendation:----------------");
 
@@ -102,20 +105,18 @@ public class Main {
 
         // book the table
 
-        Table table1 = new Table("Tavolo 1", TableStateEnum.FREE );
-        Table table2 = new Table("Tavolo 2", TableStateEnum.FREE );
-        Table table3 = new Table("Tavolo 3", TableStateEnum.FREE );
+        Table table1 = new Table("Tavolo 1", 4);
+        Table table2 = new Table("Tavolo 2", 4);
+        Table table3 = new Table("Tavolo 3", 8);
 
-        restaurant.reserveTable(table1,customer1);
-        restaurant.reserveTable(table2,customer2);
-        restaurant.reserveTable(table3,customer3);
+        restaurant.reserveTable(table1,reservation1);
 
-        restaurant.cleanTable(table2,customer2);
+        System.out.println(table1.getAvailableSeats());
+
 
         System.out.println("Situazione attuale dei tavoli occupati e dei clienti che stanno consumando");
 
-        restaurant.getMyRestaurant().forEach((table,customer)-> System.out.println(table.getName() + " is " + table.getTableState().toString().toLowerCase() + " by "+ customer.getDetails().toLowerCase()));
-
+        restaurant.printRestaurantInfo();
 
     }
 }
