@@ -1,5 +1,6 @@
 package it.restaurant;
 
+import it.restaurant.RestaurantTableReservation.Reservation;
 import it.restaurant.RestaurantTableReservation.Restaurant;
 import it.restaurant.RestaurantTableReservation.Table;
 import it.restaurant.RestaurantTableReservation.TableStateEnum;
@@ -104,18 +105,17 @@ public class Main{
         Customer customer2 = new Customer("Giulia",MenuTypeEnum.VEGETARIAN);
         Customer customer3 = new Customer("Andrea",MenuTypeEnum.CHILD);
 
-
-        List<Customer> customers = new ArrayList<>();
-        customers.add(customer1);
-        customers.add(customer2);
-        customers.add(customer3);
+        Reservation reservation1 = new Reservation("468");
+        reservation1.addCustomerToReservation(customer1);
+        reservation1.addCustomerToReservation(customer2);
+        reservation1.addCustomerToReservation(customer3);
 
         System.out.println("------------------And here the menu--------------");
 
         //Loop for assign each menu type to each type of customer with a method
-        customers.forEach(single->menu.printMenuTypeByCustomerType(single,menu));
+        //customers.forEach(single->menu.printMenuTypeByCustomerType(single,menu));
 
-        //menu.printMenuTypeByCustomerType(customer1,menu);
+        menu.printMenuTypeByCustomerType(customer1,menu);
 
 
         System.out.println("------------Recommendation:----------------");
@@ -124,19 +124,17 @@ public class Main{
 
         // book the table
 
-        Table table1 = new Table("Tavolo 1",TableStateEnum.FREE);
-        Table table2 = new Table("Tavolo 2",TableStateEnum.FREE);
-        Table table3 = new Table("Tavolo 3",TableStateEnum.FREE);
+        Table table1 = new Table("Tavolo 1",4);
+        Table table2 = new Table("Tavolo 2",4);
+        Table table3 = new Table("Tavolo 3",8);
 
-        restaurant.reserveTable(table1,customer1);
-        restaurant.reserveTable(table2,customer2);
-        restaurant.reserveTable(table3,customer3);
+        restaurant.reserveTable(table1,reservation1);
 
-        restaurant.cleanTable(table2,customer2);
+        restaurant.cleanTable(table2,reservation1);
 
         System.out.println("Situazione attuale dei tavoli occupati e dei clienti che stanno consumando");
 
-        restaurant.getMyRestaurant().forEach((table,customer) -> System.out.println(table.getName()+" is "+table.getTableState().toString().toLowerCase()+" by "+customer.getDetails().toLowerCase()));
+        restaurant.printRestaurantInfo();
     }
 }
 

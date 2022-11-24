@@ -15,24 +15,8 @@
       <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a239d832b77761394db922a4771dcb79bef51018" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/7/a71b0dcacce07c6bc7fcc9a476eef780a3ec02aa" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/2/f29805ac8fc52fb80bafc3c8525dc16c3bebe839" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/Reservation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/RestaurantTableReservation/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/Restaurant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/Table.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/customer/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/customer/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/MainDish.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/MainDish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/Pasta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/Pasta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/SideDish.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/SideDish.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/RestaurantTableReservation/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/RestaurantTableReservation/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/RestaurantTableReservation/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/RestaurantTableReservation/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/food/MainDish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/food/MainDish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/food/Pasta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/food/Pasta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/food/SideDish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/food/SideDish.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,22 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "C:/Users/Michele/OneDrive/Desktop/NuovoRistoranteGruppo4",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Michele/OneDrive/Desktop/NuovoRistoranteGruppo4&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -107,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669273952505</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix printMenu method and bugs">
+      <created>1669288662375</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669288662375</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
