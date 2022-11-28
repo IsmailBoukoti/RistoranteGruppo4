@@ -1,20 +1,17 @@
 package it.restaurant.food;
 
 
-import it.restaurant.customer.CustomerTypeEnum;
+import java.util.List;
 
 public class SideDish extends MenuItem{
 
-    public SideDish(String name, double price, CustomerTypeEnum type1, boolean isRecommended, String stringOfIngredients){
-        super(name,price,type1,isRecommended,stringOfIngredients);
-    }
 
-    public SideDish(String name, double price, CustomerTypeEnum type1, CustomerTypeEnum type2, boolean isRecommended, String stringOfIngredients){
-        super(name,price,type1,type2,isRecommended,stringOfIngredients);
+    public SideDish(String name,double price,List<MenuTypeEnum> type,boolean isRecommended,String stringOfIngredients){
+        super(name,price,type,isRecommended,stringOfIngredients);
     }
 
     @Override
-    public String printDetails(){
-        return super.printDetails();
+    public String getDetails(){
+        return super.getDetails();
     }
 }

@@ -1,9 +1,10 @@
 package it.restaurant;
 
+import it.restaurant.RestaurantTableReservation.Reservation;
 import it.restaurant.RestaurantTableReservation.Restaurant;
 import it.restaurant.RestaurantTableReservation.Table;
 import it.restaurant.RestaurantTableReservation.TableStateEnum;
-import it.restaurant.customer.CustomerTypeEnum;
+import it.restaurant.food.MenuTypeEnum;
 import it.restaurant.customer.Customer;
 import it.restaurant.food.*;
 import it.restaurant.food.Menu;
@@ -12,34 +13,68 @@ import it.restaurant.food.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class Main{
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         System.out.println("------------Welcome to our restaurant Antichi Sapori---------------");
         Restaurant restaurant = Restaurant.getInstance();
-        Menu menu = new Menu(new ArrayList<>());
-        List<MenuItem> drinkList = new ArrayList<>();
+        Menu       menu       = new Menu(new ArrayList<>());
+
+        List<MenuTypeEnum> menuForClassic = new ArrayList<>();
+        menuForClassic.add(MenuTypeEnum.CLASSIC);
+
+        List<MenuTypeEnum> menuForVegetarian = new ArrayList<>();
+        menuForVegetarian.add(MenuTypeEnum.VEGETARIAN);
+
+        List<MenuTypeEnum> menuForClassicChild = new ArrayList<>();
+        menuForClassicChild.add(MenuTypeEnum.CLASSIC);
+        menuForClassicChild.add(MenuTypeEnum.CHILD);
+
+        List<MenuTypeEnum> menuForClassicVegetarian = new ArrayList<>();
+        menuForClassicVegetarian.add(MenuTypeEnum.CLASSIC);
+        menuForClassicVegetarian.add(MenuTypeEnum.VEGETARIAN);
+
+        List<MenuTypeEnum> menuForAll = new ArrayList<>();
+        menuForAll.add(MenuTypeEnum.CLASSIC);
+        menuForAll.add(MenuTypeEnum.VEGETARIAN);
+        menuForAll.add(MenuTypeEnum.CHILD);
+
 
         //Creation Menu
-
-        Drink beer = new Drink("Beer", 5,CustomerTypeEnum.VEGETARIAN,false, "malt");
-        Drink redWhine = new Drink("Red whine ", 8,CustomerTypeEnum.VEGETARIAN, true, "grape");
-        Drink cocaCola = new Drink("Cocacola", 3,CustomerTypeEnum.VEGETARIAN,CustomerTypeEnum.CHILD, false, "sugar");
-        Drink water = new Drink("Water", 2,CustomerTypeEnum.VEGETARIAN,CustomerTypeEnum.CHILD, false, "water");
+        List<MenuItem> drinkList = new ArrayList<>();
+        Drink          beer      = new Drink("Beer",5,menuForClassicVegetarian,false,"malt");
+        Drink          redWhine  = new Drink("Red whine ",8,menuForClassicVegetarian,true,"grape");
+        Drink          cocaCola  = new Drink("Cocacola",3,menuForAll,false,"sugar");
+        Drink          water     = new Drink("Water",2,menuForAll,false,"water");
         drinkList.add(beer);
         drinkList.add(redWhine);
         drinkList.add(cocaCola);
         drinkList.add(water);
         menu.addListToMenu(drinkList);
 
-        List<MenuItem> pastasList = new ArrayList<>();
-        Pasta ragu = new Pasta("Rigatoni al ragu", 10,CustomerTypeEnum.CLASSIC,CustomerTypeEnum.CHILD,true, "pasta");
-        Pasta carbonara = new Pasta("Spaghetti alla Carbonara", 12,CustomerTypeEnum.CLASSIC ,false, "bacon");
-        Pasta piemontese = new Pasta("Agnolotti alla Piemontese", 9,CustomerTypeEnum.VEGETARIAN, false, "agnolotti");
-        Pasta polpette = new Pasta("Spaghetti alle Polpette", 8,CustomerTypeEnum.CHILD ,false, "meatballs");
-        Pasta amatriciana = new Pasta("Bucatini alla Matriciana", 10,CustomerTypeEnum.CLASSIC,false,"Guanciale");
-        Pasta pesto = new Pasta("Penne al Pesto",9, CustomerTypeEnum.CHILD,false,"Basilico");
+        List<MenuItem> wineList = new ArrayList<>();
+        Wine            montepulciano = new Wine("Rosso di Montepulciano",30.50,menuForAll,true,"Red wine",14);
+        Wine            montefalco = new Wine("Rosso Montefalco", 22,menuForAll,false,"Red wine",13.5);
+        Wine            montalcino = new Wine("Brunello di Montalcino",50,menuForAll,true,"Red wine",14);
+        Wine            pecorino = new Wine("Pecorino",18,menuForAll,false,"White wine",13);
+        Wine            cabernetFranc = new Wine("Cabernet Franc",45.5,menuForAll,true,"White wine",13.5);
+        Wine            fume = new Wine("Bianco Fume",32.5,menuForAll,false,"White wine",14);
+       wineList.add(montepulciano);
+       wineList.add(montefalco);
+       wineList.add(montalcino);
+       wineList.add(pecorino);
+       wineList.add(cabernetFranc);
+       wineList.add(fume);
+       menu.addListToMenu(wineList);
+
+        List<MenuItem> pastasList  = new ArrayList<>();
+        Pasta          ragu        = new Pasta("Rigatoni al ragu",10,menuForClassic,true,"pasta");
+        Pasta          carbonara   = new Pasta("Spaghetti alla Carbonara",12,menuForClassic,false,"bacon");
+        Pasta          piemontese  = new Pasta("Agnolotti alla Piemontese",9,menuForVegetarian,false,"agnolotti");
+        Pasta          polpette    = new Pasta("Spaghetti alle Polpette",8,menuForClassicChild,false,"meatballs");
+        Pasta          amatriciana = new Pasta("Bucatini alla Matriciana",10,menuForClassic,false,"Guanciale");
+        Pasta          pesto       = new Pasta("Penne al Pesto",9,menuForAll,false,"Basilico");
         pastasList.add(ragu);
         pastasList.add(carbonara);
         pastasList.add(piemontese);
@@ -48,13 +83,13 @@ public class Main {
         pastasList.add(pesto);
         menu.addListToMenu(pastasList);
 
-        List<MenuItem> mainDish = new ArrayList<>();
-        MainDish tagliataDiManzo = new MainDish("Tagliata di Manzo", 19,CustomerTypeEnum.CLASSIC ,CustomerTypeEnum.CHILD,false, "beef");
-        MainDish trippaAllaRomana = new MainDish("Trippa alla Romana", 15,CustomerTypeEnum.CLASSIC ,true, "trippa");
-        MainDish grigliataMista = new MainDish("Grigliata Mista", 22,CustomerTypeEnum.CLASSIC ,false, "beef,pork");
-        MainDish tartareDiAngus = new MainDish("Tartare di Angus", 25,CustomerTypeEnum.CLASSIC ,false, "angus");
-        MainDish stincoDiMaiale = new MainDish("Stinco di Maiale",17,CustomerTypeEnum.CLASSIC,false,"maiale");
-        MainDish polloAllaCacciatora = new MainDish("Pollo alla Cacciatora",15,CustomerTypeEnum.CHILD,false,"pollo");
+        List<MenuItem> mainDish            = new ArrayList<>();
+        MainDish       tagliataDiManzo     = new MainDish("Tagliata di Manzo",19,menuForClassic,false,"beef");
+        MainDish       trippaAllaRomana    = new MainDish("Trippa alla Romana",15,menuForClassic,true,"trippa");
+        MainDish       grigliataMista      = new MainDish("Grigliata Mista",22,menuForClassic,false,"beef,pork");
+        MainDish       tartareDiAngus      = new MainDish("Tartare di Angus",25,menuForClassic,false,"angus");
+        MainDish       stincoDiMaiale      = new MainDish("Stinco di Maiale",17,menuForClassicChild,false,"maiale");
+        MainDish       polloAllaCacciatora = new MainDish("Pollo alla Cacciatora",15,menuForClassic,false,"pollo");
         mainDish.add(tagliataDiManzo);
         mainDish.add(trippaAllaRomana);
         mainDish.add(grigliataMista);
@@ -63,13 +98,13 @@ public class Main {
         mainDish.add(polloAllaCacciatora);
         menu.addListToMenu(mainDish);
 
-        List<MenuItem> sideDishesList = new ArrayList<>();
-        SideDish chips = new SideDish("Chips", 3.5,CustomerTypeEnum.VEGETARIAN ,CustomerTypeEnum.CHILD,false, "potato");
-        SideDish ovenPotatoes = new SideDish("Oven potatoes", 4,CustomerTypeEnum.VEGETARIAN ,CustomerTypeEnum.CHILD,false, "potatoes");
-        SideDish salad = new SideDish("Salad", 3,CustomerTypeEnum.VEGETARIAN, false, "salad");
-        SideDish potatoCroquettes = new SideDish("Potato Croquettes", 4.5,CustomerTypeEnum.VEGETARIAN ,CustomerTypeEnum.CHILD,false, "salt");
-        SideDish grilledVegetable = new SideDish("Grilled vegetable", 4.5,CustomerTypeEnum.VEGETARIAN, true, "vegetable");
-        SideDish insalataOlivier = new SideDish("Insalata Olivier",5.5,CustomerTypeEnum.CHILD,false,"potatos and peas");
+        List<MenuItem> sideDishesList   = new ArrayList<>();
+        SideDish       chips            = new SideDish("Chips",3.5,menuForAll,false,"potato");
+        SideDish       ovenPotatoes     = new SideDish("Oven potatoes",4,menuForAll,false,"potatoes");
+        SideDish       salad            = new SideDish("Salad",3,menuForClassicVegetarian,false,"salad");
+        SideDish       potatoCroquettes = new SideDish("Potato Croquettes",4.5,menuForAll,false,"salt");
+        SideDish       grilledVegetable = new SideDish("Grilled vegetable",4.5,menuForClassicVegetarian,true,"vegetable");
+        SideDish       insalataOlivier  = new SideDish("Insalata Olivier",5.5,menuForClassicVegetarian,false,"potatos and peas");
         sideDishesList.add(chips);
         sideDishesList.add(ovenPotatoes);
         sideDishesList.add(salad);
@@ -78,23 +113,25 @@ public class Main {
         sideDishesList.add(insalataOlivier);
         menu.addListToMenu(sideDishesList);
 
+
         //Creation Customers
 
-        Customer customer1 = new Customer("Gianni", "Agnelli", CustomerTypeEnum.CLASSIC);
-        Customer customer2 = new Customer("Giulia", CustomerTypeEnum.VEGETARIAN);
-        Customer customer3 = new Customer("Andrea", CustomerTypeEnum.CHILD);
+        Customer customer1 = new Customer("Gianni","Agnelli",MenuTypeEnum.CLASSIC);
+        Customer customer2 = new Customer("Giulia",MenuTypeEnum.VEGETARIAN);
+        Customer customer3 = new Customer("Andrea",MenuTypeEnum.CHILD);
 
-
-        List<Customer> customers = new ArrayList<>();
-        customers.add(customer1);
-        customers.add(customer2);
-        customers.add(customer3);
+        Reservation reservation1 = new Reservation("468");
+        reservation1.addCustomerToReservation(customer1);
+        reservation1.addCustomerToReservation(customer2);
+        reservation1.addCustomerToReservation(customer3);
 
         System.out.println("------------------And here the menu--------------");
 
-        //Loop for assign each menu type to each type of customer with a method but if you want you can print the menu
-        //That you want for example menu.printVegetarianMenu(menu);
-        customers.forEach(customer -> {menu.printMenuTypeByCustomerType(customer,menu);});
+        //Loop for assign each menu type to each type of customer with a method
+        //customers.forEach(single->menu.printMenuTypeByCustomerType(single,menu));
+
+        menu.printMenuTypeByCustomerType(customer1,menu);
+
 
         System.out.println("------------Recommendation:----------------");
 
@@ -102,24 +139,18 @@ public class Main {
 
         // book the table
 
-        Table table1 = new Table("Tavolo 1", TableStateEnum.FREE );
-        Table table2 = new Table("Tavolo 2", TableStateEnum.FREE );
-        Table table3 = new Table("Tavolo 3", TableStateEnum.FREE );
+        Table table1 = new Table("Tavolo 1",4);
+        Table table2 = new Table("Tavolo 2",4);
+        Table table3 = new Table("Tavolo 3",8);
 
-        restaurant.reserveTable(table1,customer1);
-        restaurant.reserveTable(table2,customer2);
-        restaurant.reserveTable(table3,customer3);
+        restaurant.reserveTable(table1,reservation1);
 
-        restaurant.cleanTable(table2,customer2);
+        restaurant.cleanTable(table2,reservation1);
 
         System.out.println("Situazione attuale dei tavoli occupati e dei clienti che stanno consumando");
 
-        restaurant.getMyRestaurant().forEach((table,customer)-> System.out.println(table.getName() + " is " + table.getTableState().toString().toLowerCase() + " by "+ customer.getDetails().toLowerCase()));
-
-
+        restaurant.printRestaurantInfo();
     }
 }
-
-
 
 

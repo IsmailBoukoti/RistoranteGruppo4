@@ -1,0 +1,23 @@
+
+g
+7src/it/restaurant/RestaurantTableReservation/Table.java,6\4\64455cf8635bee96bcd25540976fce726a51de0a
+Q
+!src/it/restaurant/food/Pasta.java,4\b\4b1541ced4b4d7cb50688dfd66fe2cc41419bf44
+l
+<src/it/restaurant/RestaurantTableReservation/Restaurant.java,7\0\70dc99c3ae8b7812adeb77549554a9d643a48fbd
+P
+ src/it/restaurant/food/Menu.java,4\0\40fd297e2d640185149c4ae269d89ac4d33e480f
+T
+$src/it/restaurant/food/MenuItem.java,0\5\054259bec458e5dd3c2efcaaca554e7140ba7e29
+X
+(src/it/restaurant/customer/Customer.java,5\e\5e5d347872f4d750572a6c23175ba71c442f2e52
+T
+$src/it/restaurant/food/MainDish.java,6\1\61488f03a0cd6f0b62c97779ab1189d29f193fbd
+Q
+!src/it/restaurant/food/Drink.java,2\9\296315fa59b1f8d7fbb77745fe2eee26c6f5d0a7
+X
+(src/it/restaurant/food/MenuTypeEnum.java,a\7\a71b0dcacce07c6bc7fcc9a476eef780a3ec02aa
+T
+$src/it/restaurant/food/SideDish.java,4\5\45a0aabae1180c6be2ab7b526753343f63cd44bf
+K
+src/it/restaurant/Main.java,f\2\f29805ac8fc52fb80bafc3c8525dc16c3bebe839

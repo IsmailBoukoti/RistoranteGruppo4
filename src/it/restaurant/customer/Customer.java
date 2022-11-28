@@ -1,32 +1,36 @@
 package it.restaurant.customer;
 
 
+import it.restaurant.food.MenuTypeEnum;
+
+import java.util.List;
+
 public class Customer {
 
-    private CustomerTypeEnum type;
+    private MenuTypeEnum type;
     private String name;
     private String surname;
 
-    public Customer(String name, CustomerTypeEnum type){
+    public Customer(String name, MenuTypeEnum type){
         this.type = type;
         this.name = name;
     }
 
-    public Customer(String name, String surname, CustomerTypeEnum type){
+    public Customer(String name, String surname, MenuTypeEnum type){
         this.type = type;
         this.name = name;
         this.surname = surname;
     }
 
-public String getDetails(){if(surname != null){return name +" "+ surname +" "+ " (" + type+ ")";}else{return name+" "+ "(" + type + ")";}}
+    public String getDetails(){if(surname != null){return name +" "+ surname +" "+ " (" + type+ ")";}else{return name+" "+ "(" + type + ")";}}
 
 
 
-    public CustomerTypeEnum getType(){
+    public MenuTypeEnum getType(){
         return type;
     }
 
-    public void setType(CustomerTypeEnum type){
+    public void setType(MenuTypeEnum type){
         this.type = type;
     }
 
