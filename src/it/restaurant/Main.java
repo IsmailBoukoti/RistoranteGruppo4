@@ -105,7 +105,7 @@ public class Main{
         Customer customer2 = new Customer("Giulia",MenuTypeEnum.VEGETARIAN);
         Customer customer3 = new Customer("Andrea",MenuTypeEnum.CHILD);
 
-        Reservation reservation1 = new Reservation("468");
+        Reservation reservation1 = new Reservation("7a");
         reservation1.addCustomerToReservation(customer1);
         reservation1.addCustomerToReservation(customer2);
         reservation1.addCustomerToReservation(customer3);
@@ -129,8 +129,6 @@ public class Main{
         Table table3 = new Table("Tavolo 3",8);
 
         restaurant.reserveTable(table1,reservation1);
-
-        restaurant.cleanTable(table2,reservation1);
 
         System.out.println("Situazione attuale dei tavoli occupati e dei clienti che stanno consumando");
 
