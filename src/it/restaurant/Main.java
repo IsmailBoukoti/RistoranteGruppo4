@@ -53,6 +53,21 @@ public class Main{
         drinkList.add(water);
         menu.addListToMenu(drinkList);
 
+        List<MenuItem> wineList = new ArrayList<>();
+        Wine            montepulciano = new Wine("Rosso di Montepulciano",30.50,menuForAll,true,"Red wine",14);
+        Wine            montefalco = new Wine("Rosso Montefalco", 22,menuForAll,false,"Red wine",13.5);
+        Wine            montalcino = new Wine("Brunello di Montalcino",50,menuForAll,true,"Red wine",14);
+        Wine            pecorino = new Wine("Pecorino",18,menuForAll,false,"White wine",13);
+        Wine            cabernetFranc = new Wine("Cabernet Franc",45.5,menuForAll,true,"White wine",13.5);
+        Wine            fume = new Wine("Bianco Fume",32.5,menuForAll,false,"White wine",14);
+       wineList.add(montepulciano);
+       wineList.add(montefalco);
+       wineList.add(montalcino);
+       wineList.add(pecorino);
+       wineList.add(cabernetFranc);
+       wineList.add(fume);
+       menu.addListToMenu(wineList);
+
         List<MenuItem> pastasList  = new ArrayList<>();
         Pasta          ragu        = new Pasta("Rigatoni al ragu",10,menuForClassic,true,"pasta");
         Pasta          carbonara   = new Pasta("Spaghetti alla Carbonara",12,menuForClassic,false,"bacon");
