@@ -120,7 +120,13 @@ public class Main{
         Customer customer2 = new Customer("Giulia",MenuTypeEnum.VEGETARIAN);
         Customer customer3 = new Customer("Andrea",MenuTypeEnum.CHILD);
 
-        Reservation reservation1 = new Reservation("468");
+        List<Customer> customerList = new ArrayList<>();
+
+        customerList.add(customer1);
+        customerList.add(customer2);
+
+        Reservation reservation1 = new Reservation("468",customerList);
+        Reservation reservation2 = new Reservation("468", new ArrayList<>());
         reservation1.addCustomerToReservation(customer1);
         reservation1.addCustomerToReservation(customer2);
         reservation1.addCustomerToReservation(customer3);

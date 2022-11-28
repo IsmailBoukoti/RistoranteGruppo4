@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e353b95-351a-4290-b28a-4f95d033e238" name="Changes" comment="Fix printMenu method and bugs">
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/food/Wine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/Reservation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/Restaurant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/Table.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/TableStateEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/RestaurantTableReservation/TableStateEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/customer/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/customer/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/Drink.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/Drink.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/MainDish.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/MainDish.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/MenuItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/MenuItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/MenuTypeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/MenuTypeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/Pasta.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/Pasta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/SideDish.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NuovoRistoranteGruppo4/it/restaurant/food/SideDish.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/RestaurantTableReservation/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/RestaurantTableReservation/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/RestaurantTableReservation/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/RestaurantTableReservation/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/restaurant/RestaurantTableReservation/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/RestaurantTableReservation/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Wine" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,7 +123,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Wine" />
+                        <option value="develop" />
                       </list>
                     </value>
                   </entry>

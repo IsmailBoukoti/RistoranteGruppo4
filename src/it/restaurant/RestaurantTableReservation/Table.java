@@ -5,19 +5,21 @@ package it.restaurant.RestaurantTableReservation;
  */
 public class Table {
     private String name;
-    private int seats;
-    private int availableSeats = seats;
-    private TableStateEnum tableState = TableStateEnum.FREE;
+    private int initialSeats;
+    private int availableSeats;
+    private TableStateEnum tableState;
 
     /**
      * Instantiates a new Table.
      *
      * @param name  the name
-     * @param seats the seats
+     * @param initialSeats the seats
      */
-    public Table(String name,int seats) {
+    public Table(String name,int initialSeats) {
         this.name = name;
-        this.seats = seats;
+        this.initialSeats = initialSeats;
+        this.availableSeats = initialSeats;
+        this.tableState = TableStateEnum.FREE;
     }
 
     /**
@@ -43,8 +45,8 @@ public class Table {
      *
      * @return the seats
      */
-    public int getSeats() {
-        return seats;
+    public int getInitialSeats() {
+        return initialSeats;
     }
 
     /**
@@ -70,7 +72,7 @@ public class Table {
      */
     public void freeTable(){
         this.tableState = TableStateEnum.FREE;
-        this.availableSeats = this.seats;
+        this.availableSeats = this.initialSeats;
     }
 
     /**
@@ -78,7 +80,7 @@ public class Table {
      * @param requiredSeats the required seats
      */
     public void reserveTable(int requiredSeats){
-        this.availableSeats = seats - requiredSeats;
+        this.availableSeats = initialSeats - requiredSeats;
         this.tableState = TableStateEnum.OCCUPIED;
     }
 
