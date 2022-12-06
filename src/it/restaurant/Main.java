@@ -4,6 +4,7 @@ import it.restaurant.RestaurantTableReservation.Reservation;
 import it.restaurant.RestaurantTableReservation.Restaurant;
 import it.restaurant.RestaurantTableReservation.Table;
 import it.restaurant.RestaurantTableReservation.TableStateEnum;
+import it.restaurant.customer.CustomerCart;
 import it.restaurant.food.MenuTypeEnum;
 import it.restaurant.customer.Customer;
 import it.restaurant.food.*;
@@ -116,7 +117,7 @@ public class Main{
 
         //Creation Customers
 
-        Customer customer1 = new Customer("Gianni","Agnelli",MenuTypeEnum.CLASSIC);
+        Customer customer1 = new Customer("Gianni","Agnelli",MenuTypeEnum.CLASSIC, new CustomerCart(new ArrayList<>(), "1234"));
         Customer customer2 = new Customer("Giulia",MenuTypeEnum.VEGETARIAN);
         Customer customer3 = new Customer("Andrea",MenuTypeEnum.CHILD);
 
@@ -156,6 +157,12 @@ public class Main{
         System.out.println("Situazione attuale dei tavoli occupati e dei clienti che stanno consumando");
 
         restaurant.printRestaurantInfo();
+
+        // order item from the menu
+
+        customer1.orderMenuItem(chips);
+        customer1.orderMenuItem(salad);
+        customer1.getCart().cartStatus();
     }
 }
 
