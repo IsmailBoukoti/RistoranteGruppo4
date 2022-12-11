@@ -45,11 +45,11 @@ public class Main{
         //Creation Menu
         List<MenuItem> drinkList = new ArrayList<>();
         Drink          beer      = new Drink("Beer",5,menuForClassicVegetarian,false,"malt");
-        Drink          redWhine  = new Drink("Red whine ",8,menuForClassicVegetarian,true,"grape");
+        Drink          redWine  = new Drink("Red wine ",8,menuForClassicVegetarian,true,"grape");
         Drink          cocaCola  = new Drink("Cocacola",3,menuForAll,false,"sugar");
         Drink          water     = new Drink("Water",2,menuForAll,false,"water");
         drinkList.add(beer);
-        drinkList.add(redWhine);
+        drinkList.add(redWine);
         drinkList.add(cocaCola);
         drinkList.add(water);
         menu.addListToMenu(drinkList);
@@ -162,7 +162,13 @@ public class Main{
 
         customer1.orderMenuItem(chips);
         customer1.orderMenuItem(salad);
-        customer1.getCart().cartStatus();
+        customer1.orderMenuItem(redWine);
+        customer1.getCart().printCartDetails();
+
+        customer1.addFidelityPoints(50);
+
+        customer1.printBill();
+
     }
 }
 
