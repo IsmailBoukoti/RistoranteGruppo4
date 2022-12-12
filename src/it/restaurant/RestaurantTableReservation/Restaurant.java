@@ -1,7 +1,5 @@
 package it.restaurant.RestaurantTableReservation;
 
-import it.restaurant.customer.Customer;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,12 +43,10 @@ public class Restaurant {
     public void reserveTable(Table table, Reservation reservation) {
         if (table.getTableState() == TableStateEnum.OCCUPIED) {
             System.out.println("Error : the requested table is already occupied by other customers");
-            return;
         }
-        if ((table.getSeats() >= reservation.getRequiredSeats())) {
+        if ((table.getInitialSeats() >= reservation.getRequiredSeats())) {
             myRestaurant.put(table, reservation);
             table.reserveTable(reservation.getRequiredSeats());
-            return;
         }
         System.out.println("There aren't enough available seats for this reservation");
     }
@@ -63,14 +59,14 @@ public class Restaurant {
      * @param reservation the reservation
      * @return the reservation
      */
-    public Reservation cleanTable(Table table, Reservation reservation) {
+    public void cleanTable(Table table, Reservation reservation) {
         if (table.getTableState() == TableStateEnum.FREE) {
             System.out.println("Error : the requested table had already been freed and cleaned");
         }
-        else { myRestaurant.remove(table, reservation);
+        else {
+            myRestaurant.remove(table, reservation);
             table.freeTable();
         }
-        return reservation;
     }
 
     /**

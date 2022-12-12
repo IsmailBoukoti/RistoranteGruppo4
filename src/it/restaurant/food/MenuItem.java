@@ -12,13 +12,21 @@ public class MenuItem{
     private List<MenuTypeEnum> type;
     private boolean isRecommended;
     private String stringOfIngredients;
+    private boolean dishOfTheDay;
 
-    public MenuItem(String name,double price,List<MenuTypeEnum> type,boolean isRecommended,String stringOfIngredients){
+    public MenuItem(String name,double price,List<MenuTypeEnum> type,boolean isRecommended,String stringOfIngredients, boolean dishOfTheDay){
         this.name = name;
         this.price = price;
         this.type = type;
         this.isRecommended = isRecommended;
         this.stringOfIngredients = stringOfIngredients;
+        this.dishOfTheDay = dishOfTheDay;
+    }
+
+    public boolean isDishOfTheDay(){return dishOfTheDay;}
+
+    public void setDishOfTheDay(boolean dishOfTheDay) {
+        this.dishOfTheDay = dishOfTheDay;
     }
 
     public String getName(){

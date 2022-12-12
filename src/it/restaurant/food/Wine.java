@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Wine extends MenuItem{
     private double gradoVino;
-    public Wine(String name, double price, List<MenuTypeEnum> type, boolean isRecommended, String stringOfIngredients,double gradoVino) {
-        super(name, price, type, isRecommended, stringOfIngredients);
+    public Wine(String name, double price, List<MenuTypeEnum> type, boolean isRecommended, String stringOfIngredients,double gradoVino,boolean dishOfTheDay) {
+        super(name, price, type, isRecommended, stringOfIngredients,dishOfTheDay);
         this.gradoVino = gradoVino;
     }
 

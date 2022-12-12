@@ -14,14 +14,6 @@ public class Reservation {
     private List<Customer> customerList = new ArrayList<>();
     private int requiredSeats = customerList.size();
 
-    /**
-     * Instantiates a new Reservation and creates and emtpy customer list.
-     *
-     * @param reservationId the reservation id
-     */
-    public Reservation(String reservationId){
-        this(reservationId,new ArrayList<>());
-    }
 
     /**
      * Instantiates a new Reservation with an already created customer list
@@ -30,7 +22,7 @@ public class Reservation {
      * @param customerList  the customer list
      */
     public Reservation(String reservationId, List<Customer> customerList) {
-        this.reservationId = reservationId ;
+        this.reservationId = reservationId;
         this.customerList = customerList;
     }
 
