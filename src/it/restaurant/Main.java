@@ -48,10 +48,12 @@ public class Main{
         Drink          redWine  = new Drink("Red wine ",8,menuForClassicVegetarian,true,"grape",false);
         Drink          cocaCola  = new Drink("Cocacola",3,menuForAll,false,"sugar",false);
         Drink          water     = new Drink("Water",2,menuForAll,false,"water",false);
+        Drink          coffee = new Drink("coffee",1.5,menuForAll,false,"coffee beans, water",false);
         drinkList.add(beer);
         drinkList.add(redWine);
         drinkList.add(cocaCola);
         drinkList.add(water);
+        drinkList.add(coffee);
         menu.addListToMenu(drinkList);
 
         List<MenuItem> wineList = new ArrayList<>();
@@ -118,7 +120,7 @@ public class Main{
         //Creation Customers
 
         Customer customer1 = new Customer("Gianni","Agnelli",MenuTypeEnum.CLASSIC, new CustomerCart(new ArrayList<>(), "1234"));
-        Customer customer2 = new Customer("Giulia",MenuTypeEnum.VEGETARIAN);
+        Customer customer2 = new Customer("Giulia","Agnelli",MenuTypeEnum.VEGETARIAN,new CustomerCart(new ArrayList<>(),"1235"));
         Customer customer3 = new Customer("Andrea",MenuTypeEnum.CHILD);
 
         List<Customer> customerList = new ArrayList<>();
@@ -150,17 +152,36 @@ public class Main{
 
         // book the table
 
-        Table table1 = new Table("Tavolo 1",4);
-        Table table2 = new Table("Tavolo 2",4);
-        Table table3 = new Table("Tavolo 3",8);
+        Table table1 = new Table("Tavolo 1", 4);
+        Table table2 = new Table("Tavolo 2", 4);
+        Table table3 = new Table("Tavolo 3", 8);
 
-        restaurant.reserveTable(table1,reservation1);
+        restaurant.reserveTable(table1, reservation1);
 
-        restaurant.cleanTable(table2,reservation1);
+        restaurant.cleanTable(table2, reservation1);
 
         System.out.println("Situazione attuale dei tavoli occupati e dei clienti che stanno consumando");
 
         restaurant.printRestaurantInfo();
+
+        //Creating fixed menus
+
+        List<MenuItem> listFixedMenuClassic = new ArrayList<>();
+        listFixedMenuClassic.add(amatriciana);
+        listFixedMenuClassic.add(salad);
+        listFixedMenuClassic.add(montepulciano);
+        FixedMenu fixedMenuClassic = new FixedMenu(new ArrayList<>());
+        fixedMenuClassic.addListToFixedMenu(listFixedMenuClassic);
+
+        List<MenuItem> listFixedMenuVegetarian = new ArrayList<>();
+        listFixedMenuVegetarian.add(fume);
+        listFixedMenuVegetarian.add(pesto);
+        listFixedMenuVegetarian.add(grilledVegetable);
+        listFixedMenuVegetarian.add(coffee);
+        FixedMenu fixedMenuVegetarian = new FixedMenu(new ArrayList<>());
+        fixedMenuVegetarian.addListToFixedMenu(listFixedMenuVegetarian);
+
+        customer2.orderFixedMenu(fixedMenuVegetarian);
 
         // order item from the menu
 
@@ -171,7 +192,7 @@ public class Main{
 
         customer1.addFidelityPoints(50);
 
-        customer1.printBill();
+        customer1.checkout();
 
     }
 }
