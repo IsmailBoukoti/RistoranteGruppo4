@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e353b95-351a-4290-b28a-4f95d033e238" name="Changes" comment="Fix printMenu method and bugs">
-      <change afterPath="$PROJECT_DIR$/src/it/restaurant/food/Dessert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/food/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/food/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/restaurant/food/Wine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/restaurant/food/Wine.java" afterDir="false" />
-    </list>
+    <list default="true" id="3e353b95-351a-4290-b28a-4f95d033e238" name="Changes" comment="Feat: general refactor, change some dishes (for logic purpose), added dessert" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669632671922</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Feat: general refactor, change some dishes (for logic purpose), added dessert">
+      <created>1670852664300</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670852664300</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -138,7 +139,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="develop" />
+                        <option value="feat-refactor" />
                       </list>
                     </value>
                   </entry>
@@ -153,8 +154,9 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add side dishes and fix" />
-    <MESSAGE value="Fix printMenu method and bugs" />
     <MESSAGE value="add Wine" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Wine" />
+    <MESSAGE value="Fix printMenu method and bugs" />
+    <MESSAGE value="Feat: general refactor, change some dishes (for logic purpose), added dessert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: general refactor, change some dishes (for logic purpose), added dessert" />
   </component>
 </project>
