@@ -55,11 +55,12 @@ public class Menu{
     }
 
     //TODO unire i metodi dish of the days e crearne uno solo che li stampa tutti
-    public void printDishOfTheDay() {
+    public void printDishOfTheDayClassic() {
         System.out.println("\n------------DISH OF THE DAY CLASSIC MENU------------");
         for (MenuItem dishClassic : itemList) {
-            if (dishClassic.isDishOfTheDay()) {
-                System.out.println("The dish of the day is: " + dishClassic.getName());
+            if (dishClassic.getType().contains(MenuTypeEnum.CLASSIC) && dishClassic.isDishOfTheDay()) {
+                System.out.println("The dish of the day is: " + dishClassic.getName()+"\n");
+                return;
             }
         }
     }
@@ -68,8 +69,8 @@ public class Menu{
         System.out.println("\n------------DISH OF THE DAY VEGETARIAN MENU------------");
         for (MenuItem dishVegetarian : itemList) {
             if (dishVegetarian.getType().contains(MenuTypeEnum.VEGETARIAN) && dishVegetarian.isDishOfTheDay()) {
-                System.out.println("The all dishes of the day per types are: " + dishVegetarian.getName()+"\n");
-                return; // mi dice di uscire dal metodo
+                System.out.println("The dish of the day is: " + dishVegetarian.getName()+"\n");
+                return;
             }
         }
     }
@@ -79,7 +80,7 @@ public class Menu{
         for (MenuItem dishChild : itemList) {
             if (dishChild.getType().contains(MenuTypeEnum.CHILD) && dishChild.isDishOfTheDay()) {
                 System.out.println("The dish of the day is: " + dishChild.getName()+"\n");
-                return; // mi dice di uscire dal metodo
+                return;
             }
         }
     }

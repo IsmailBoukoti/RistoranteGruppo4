@@ -3,7 +3,6 @@ package it.restaurant;
 import it.restaurant.RestaurantTableReservation.Reservation;
 import it.restaurant.RestaurantTableReservation.Restaurant;
 import it.restaurant.RestaurantTableReservation.Table;
-import it.restaurant.RestaurantTableReservation.TableStateEnum;
 import it.restaurant.customer.CustomerCart;
 import it.restaurant.food.MenuTypeEnum;
 import it.restaurant.customer.Customer;
@@ -18,7 +17,7 @@ public class Main{
 
     public static void main(String[] args){
 
-        System.out.println("------------Welcome to our restaurant Antichi Sapori---------------");
+        System.out.println("------------Welcome to our restaurant 'Antichi Sapori'---------------");
         Restaurant restaurant = Restaurant.getInstance();
         Menu       menu       = new Menu(new ArrayList<>());
 
@@ -57,64 +56,79 @@ public class Main{
         menu.addListToMenu(drinkList);
 
         List<MenuItem> wineList = new ArrayList<>();
-        Wine            montepulciano = new Wine("Rosso di Montepulciano",30.50,menuForAll,true,"Red wine",14,false);
-        Wine            montefalco = new Wine("Rosso Montefalco", 22,menuForAll,false,"Red wine",13.5,false);
-        Wine            montalcino = new Wine("Brunello di Montalcino",50,menuForAll,true,"Red wine",14,false);
-        Wine            pecorino = new Wine("Pecorino",18,menuForAll,false,"White wine",13,false);
-        Wine            cabernetFranc = new Wine("Cabernet Franc",45.5,menuForAll,true,"White wine",13.5,false);
-        Wine            fume = new Wine("Bianco Fume",32.5,menuForAll,false,"White wine",14,false);
-       wineList.add(montepulciano);
-       wineList.add(montefalco);
-       wineList.add(montalcino);
-       wineList.add(pecorino);
-       wineList.add(cabernetFranc);
-       wineList.add(fume);
-       menu.addListToMenu(wineList);
+        Wine            montepulciano = new Wine("Rosso di Montepulciano", 30.50, menuForAll, true, "Red wine", 14, false);
+        Wine            montefalco    = new Wine("Rosso Montefalco", 22, menuForAll, false, "Red wine", 13.5, false);
+        Wine            montalcino    = new Wine("Brunello di Montalcino", 50, menuForAll, true, "Red wine", 14, false);
+        Wine            pecorino      = new Wine("Pecorino", 18, menuForAll, false, "White wine", 13, false);
+        Wine            cabernetFranc = new Wine("Cabernet Franc", 45.5, menuForAll, true, "White wine", 13.5, false);
+        Wine            fume          = new Wine("Bianco Fume", 32.5, menuForAll, false, "White wine", 14, false);
+        wineList.add(montepulciano);
+        wineList.add(montefalco);
+        wineList.add(montalcino);
+        wineList.add(pecorino);
+        wineList.add(cabernetFranc);
+        wineList.add(fume);
+        menu.addListToMenu(wineList);
 
         List<MenuItem> pastasList  = new ArrayList<>();
-        Pasta          ragu        = new Pasta("Rigatoni al ragu",10,menuForClassic,true,"pasta",false);
-        Pasta          carbonara   = new Pasta("Spaghetti alla Carbonara",12,menuForClassic,false,"bacon",false);
-        Pasta          piemontese  = new Pasta("Agnolotti alla Piemontese",9,menuForVegetarian,false,"agnolotti",false);
-        Pasta          polpette    = new Pasta("Spaghetti alle Polpette",8,menuForClassicChild,false,"meatballs",true);
-        Pasta          amatriciana = new Pasta("Bucatini alla Matriciana",10,menuForClassic,false,"Guanciale",false);
-        Pasta          pesto       = new Pasta("Penne al Pesto",9,menuForAll,false,"Basilico",false);
+        Pasta          ragu        = new Pasta("Ragu rigatoni",10,menuForClassic,true,"rigatoni, meat ragu",false);
+        Pasta          carbonara   = new Pasta("Carbonara spaghetti",12,menuForClassic,false,"eggs, spaghetti, pecorino, black pepper, guanciale",false);
+        Pasta          plin        = new Pasta("Agnolotti al plin",9,menuForVegetarian,false,"agnolotti",false);
+        Pasta          tomato      = new Pasta("Tomato spaghetti",8,menuForClassicChild,false,"tomato sauce, spaghetti",true);
+        Pasta          matriciana  = new Pasta("Bucatini alla Matriciana",10,menuForClassic,false,"bucatini, guanciale, tomato sauce, chilli pepper",false);
+        Pasta          pesto       = new Pasta("Pesto sauce pennette",9,menuForAll,false,"Pesto sauce, penne",false);
         pastasList.add(ragu);
         pastasList.add(carbonara);
-        pastasList.add(piemontese);
-        pastasList.add(polpette);
-        pastasList.add(amatriciana);
+        pastasList.add(plin);
+        pastasList.add(tomato);
+        pastasList.add(matriciana);
         pastasList.add(pesto);
         menu.addListToMenu(pastasList);
 
         List<MenuItem> mainDish            = new ArrayList<>();
-        MainDish       tagliataDiManzo     = new MainDish("Tagliata di Manzo",19,menuForClassic,false,"beef",false);
-        MainDish       trippaAllaRomana    = new MainDish("Trippa alla Romana",15,menuForClassic,true,"trippa",false);
-        MainDish       grigliataMista      = new MainDish("Grigliata Mista",22,menuForClassic,false,"beef,pork",false);
-        MainDish       tartareDiAngus      = new MainDish("Tartare di Angus",25,menuForClassic,false,"angus",false);
-        MainDish       stincoDiMaiale      = new MainDish("Stinco di Maiale",17,menuForClassicChild,false,"maiale",false);
-        MainDish       polloAllaCacciatora = new MainDish("Pollo alla Cacciatora",15,menuForClassic,false,"pollo",true);
-        mainDish.add(tagliataDiManzo);
-        mainDish.add(trippaAllaRomana);
-        mainDish.add(grigliataMista);
-        mainDish.add(tartareDiAngus);
-        mainDish.add(stincoDiMaiale);
-        mainDish.add(polloAllaCacciatora);
+        MainDish       beef                = new MainDish("Cut of beef",19,menuForClassic,false,"beef",false);
+        MainDish       tripe               = new MainDish("Roman tripe",15,menuForClassic,true,"guanciale, pecorino, carrot, white wine, garlic, black pepper, onion, celery, tomato, mint, salt",false);
+        MainDish       duck                = new MainDish("Duck breast glazed with pears",22,menuForClassic,false,"gorgonzola, duck breast, red wine, butter, flour, sugar, pear, black pepper, salt",false);
+        MainDish       tartare             = new MainDish("Angus Tartare",25,menuForClassic,false,"angus",false);
+        MainDish       florentine          = new MainDish("Florentine steak",17,menuForClassicChild,false,"steak",false);
+        MainDish       cacciatora          = new MainDish("Chicken cacciatora",15,menuForClassic,false,"chicken, onion, celery, red wine, rosemary, salt, tomato, carrot, garlic, black pepper",true);
+        mainDish.add(beef);
+        mainDish.add(tripe);
+        mainDish.add(duck);
+        mainDish.add(tartare);
+        mainDish.add(florentine);
+        mainDish.add(cacciatora);
         menu.addListToMenu(mainDish);
 
         List<MenuItem> sideDishesList   = new ArrayList<>();
-        SideDish       chips            = new SideDish("Chips",3.5,menuForAll,false,"potato",false);
-        SideDish       ovenPotatoes     = new SideDish("Oven potatoes",4,menuForAll,false,"potatoes",false);
-        SideDish       salad            = new SideDish("Salad",3,menuForClassicVegetarian,false,"salad",false);
-        SideDish       potatoCroquettes = new SideDish("Potato Croquettes",4.5,menuForAll,false,"salt",false);
-        SideDish       grilledVegetable = new SideDish("Grilled vegetable",4.5,menuForClassicVegetarian,true,"vegetable",true);
-        SideDish       insalataOlivier  = new SideDish("Insalata Olivier",5.5,menuForClassicVegetarian,false,"potatos and peas",false);
-        sideDishesList.add(chips);
+        SideDish       fries            = new SideDish("French fries",3.5,menuForAll,false,"potato",false);
+        SideDish       ovenPotatoes     = new SideDish("Oven potatoes",4,menuForAll,false,"potato",false);
+        SideDish       salad            = new SideDish("Salad",3,menuForClassicVegetarian,false,"salad, tomato, olive",false);
+        SideDish       potatoCroquettes = new SideDish("Potato Croquettes",4.5,menuForClassicChild,false,"potato, batter, cheese",false);
+        SideDish       grilledVegetable = new SideDish("Grilled vegetable",4.5,menuForClassicVegetarian,true,"mixed fresh vegetables",true);
+        SideDish       olivier          = new SideDish("Olivier salad",5.5,menuForClassicVegetarian,false,"potatos and peas",false);
+        sideDishesList.add(fries);
         sideDishesList.add(ovenPotatoes);
         sideDishesList.add(salad);
         sideDishesList.add(potatoCroquettes);
         sideDishesList.add(grilledVegetable);
-        sideDishesList.add(insalataOlivier);
+        sideDishesList.add(olivier);
         menu.addListToMenu(sideDishesList);
+
+        List<MenuItem> dessertList   = new ArrayList<>();
+        Dessert        catalan       = new Dessert("Catalan cream", 5, menuForClassicChild, true, "milk, sugar, cinnamon, eggs, lemon", false);
+        Dessert        sorbet        = new Dessert("Lemon sorbet", 3.5, menuForClassicChild, false, "lemon juice, sugar, eggs, water, limoncello", false);
+        Dessert        fruitSalad    = new Dessert("Fruit salad", 3.5, menuForAll, false, "mixed fresh fruit", true);
+        Dessert        sacher        = new Dessert("Sacher cake", 7, menuForClassic, true, "dark chocolate, eggs, flour, sugar, butter, vanilla, Apricot jam", false);
+        Dessert        iceCream      = new Dessert("Ice cream drowned in coffee", 5.5, menuForClassicVegetarian, false, "Soymilk chocolate ice cream, coffee", false);
+        Dessert        pudding       = new Dessert("Caramel pudding", 4, menuForClassicChild, false, "milk, caramel, sugar", false);
+        dessertList.add(catalan);
+        dessertList.add(sorbet);
+        dessertList.add(fruitSalad);
+        dessertList.add(sacher);
+        dessertList.add(iceCream);
+        dessertList.add(pudding);
+        menu.addListToMenu(dessertList);
 
 
         //Creation Customers
@@ -146,7 +160,7 @@ public class Main{
 
         menu.printRecommendedDishes();
 
-        menu.printDishOfTheDay();
+        menu.printDishOfTheDayClassic();
         menu.printDishOfTheDayVegetarian();
         menu.printDishOfTheDayChild();
 
@@ -167,7 +181,7 @@ public class Main{
         //Creating fixed menus
 
         List<MenuItem> listFixedMenuClassic = new ArrayList<>();
-        listFixedMenuClassic.add(amatriciana);
+        listFixedMenuClassic.add(matriciana);
         listFixedMenuClassic.add(salad);
         listFixedMenuClassic.add(montepulciano);
         FixedMenu fixedMenuClassic = new FixedMenu(new ArrayList<>());
@@ -185,7 +199,7 @@ public class Main{
 
         // order item from the menu
 
-        customer1.orderMenuItem(chips);
+        customer1.orderMenuItem(fries);
         customer1.orderMenuItem(salad);
         customer1.orderMenuItem(redWine);
         customer1.getCart().printCartDetails();
