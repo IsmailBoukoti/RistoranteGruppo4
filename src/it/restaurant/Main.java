@@ -16,7 +16,7 @@ import java.util.List;
 
 public class Main{
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws SQLException {
 
         System.out.println("------------Welcome to our restaurant 'Antichi Sapori'---------------");
         Restaurant restaurant = Restaurant.getInstance();
@@ -208,6 +208,7 @@ public class Main{
         customer1.addFidelityPoints(50);
 
         customer1.checkout();
+
 
     }
 }
