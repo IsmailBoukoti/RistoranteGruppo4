@@ -3,10 +3,10 @@ package it.restaurant.food;
 import java.util.List;
 
 public class Wine extends MenuItem{
-    private double gradoVino;
-    public Wine(String name, double price, List<MenuTypeEnum> type, boolean isRecommended, String stringOfIngredients,double gradoVino,boolean dishOfTheDay) {
+    private double alcoholConcentration;
+    public Wine(String name, double price, MenuTypeEnum type, boolean isRecommended, String stringOfIngredients, double alcoholConcentration, boolean dishOfTheDay) {
         super(name, price, type, isRecommended, stringOfIngredients,dishOfTheDay);
-        this.gradoVino = gradoVino;
+        this.alcoholConcentration = alcoholConcentration;
     }
 
     @Override
