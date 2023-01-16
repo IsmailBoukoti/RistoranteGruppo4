@@ -15,7 +15,6 @@ public class CustomerRepository {
                 + "CREATE TABLE IF NOT EXISTS `customer` ( "
                 + "  `name` varchar(20) DEFAULT NULL, "
                 + "  `surname` varchar(30) DEFAULT NULL, "
-                + "  `cart_id` int(4) NOT NULL AUTO_INCREMENT, "
                 + "  `fidelity_points` double(10,2) DEFAULT NULL, "
                 + "  `food_preference` varchar(20) DEFAULT NULL, "
                 + ")";
