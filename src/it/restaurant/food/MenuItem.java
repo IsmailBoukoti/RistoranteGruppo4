@@ -4,17 +4,17 @@ import java.util.List;
 
 public class MenuItem{
 
-
+    private MenuItemRepository menuItemRepository;
     private String name;
 
     private double price;
 
-    private List<MenuTypeEnum> type;
+    private MenuTypeEnum type;
     private boolean isRecommended;
     private String stringOfIngredients;
     private boolean dishOfTheDay;
 
-    public MenuItem(String name,double price,List<MenuTypeEnum> type,boolean isRecommended,String stringOfIngredients, boolean dishOfTheDay){
+    public MenuItem(String name,double price,MenuTypeEnum type,boolean isRecommended,String stringOfIngredients, boolean dishOfTheDay){
         this.name = name;
         this.price = price;
         this.type = type;
@@ -45,11 +45,11 @@ public class MenuItem{
         this.price = price;
     }
 
-    public List<MenuTypeEnum> getType(){
+    public MenuTypeEnum getType(){
         return type;
     }
 
-    public void setType(List<MenuTypeEnum> type){
+    public void setType(MenuTypeEnum type){
         this.type = type;
     }
 

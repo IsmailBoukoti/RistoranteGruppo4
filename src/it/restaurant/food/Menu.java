@@ -37,13 +37,12 @@ public class Menu{
     public void printMenuTypeByCustomerType(Customer customer,Menu menu){
         System.out.println("------------Dear "+customer.getName()+" we have for you "+customer.getType()+" menu-----");
         for (MenuItem menuItem : menu.itemList){
-            for (MenuTypeEnum menuTypeEnum : menuItem.getType()){
-                if(customer.getType() == menuTypeEnum){
+                if(customer.getType() == menuItem.getType()){
                     System.out.println(menuItem.getDetails());
                 }
             }
         }
-    }
+
 
 
     public void printRecommendedDishes(){
@@ -58,7 +57,7 @@ public class Menu{
     public void printDishOfTheDayClassic() {
         System.out.println("\n------------DISH OF THE DAY CLASSIC MENU------------");
         for (MenuItem dishClassic : itemList) {
-            if (dishClassic.getType().contains(MenuTypeEnum.CLASSIC) && dishClassic.isDishOfTheDay()) {
+            if (dishClassic.getType().equals(MenuTypeEnum.CLASSIC) && dishClassic.isDishOfTheDay()) {
                 System.out.println("The dish of the day is: " + dishClassic.getName()+"\n");
                 return;
             }
@@ -68,7 +67,7 @@ public class Menu{
     public void printDishOfTheDayVegetarian() {
         System.out.println("\n------------DISH OF THE DAY VEGETARIAN MENU------------");
         for (MenuItem dishVegetarian : itemList) {
-            if (dishVegetarian.getType().contains(MenuTypeEnum.VEGETARIAN) && dishVegetarian.isDishOfTheDay()) {
+            if (dishVegetarian.getType().equals(MenuTypeEnum.VEGETARIAN) && dishVegetarian.isDishOfTheDay()) {
                 System.out.println("The dish of the day is: " + dishVegetarian.getName()+"\n");
                 return;
             }
@@ -78,7 +77,7 @@ public class Menu{
     public void printDishOfTheDayChild() {
         System.out.println("------------DISH OF THE DAY CHILD MENU------------");
         for (MenuItem dishChild : itemList) {
-            if (dishChild.getType().contains(MenuTypeEnum.CHILD) && dishChild.isDishOfTheDay()) {
+            if (dishChild.getType().equals(MenuTypeEnum.CHILD) && dishChild.isDishOfTheDay()) {
                 System.out.println("The dish of the day is: " + dishChild.getName()+"\n");
                 return;
             }

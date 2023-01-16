@@ -12,64 +12,8 @@ public class MenuItemRepository {
 
     private final String db_url = "jdbc:mysql://localhost:3306/newdb";
     private final String user = "root";
-    private final String password = "Passworld@0";
+    private final String password = "password";
 
-
-    private String name;
-    private Integer price;
-    //private List<MenuTypeEnum> type;
-    private boolean isRecommended;
-    private String stringOfIngredients;
-    private boolean dishOfTheDay;
-
-    public MenuItemRepository(String name,Integer price,boolean isRecommended,String stringOfIngredients, boolean dishOfTheDay){
-        this.name = name;
-        this.price = price;
-        this.isRecommended = isRecommended;
-        this.stringOfIngredients = stringOfIngredients;
-        this.dishOfTheDay = dishOfTheDay;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Integer price) {
-        this.price = price;
-    }
-
-
-    public boolean isRecommended() {
-        return isRecommended;
-    }
-
-    public void setRecommended(boolean recommended) {
-        isRecommended = recommended;
-    }
-
-    public String getStringOfIngredients() {
-        return stringOfIngredients;
-    }
-
-    public void setStringOfIngredients(String stringOfIngredients) {
-        this.stringOfIngredients = stringOfIngredients;
-    }
-
-    public boolean isDishOfTheDay() {
-        return dishOfTheDay;
-    }
-
-    public void setDishOfTheDay(boolean dishOfTheDay) {
-        this.dishOfTheDay = dishOfTheDay;
-    }
 
     public void createTableMenuItem() throws SQLException {
         Connection con = DriverManager.getConnection(db_url, user, password);
@@ -87,17 +31,16 @@ public class MenuItemRepository {
 
         statement.executeUpdate(queryTable);
         con.close();
-
     }
 
-    public void insertMenuItem() throws SQLException {
+    public void insertMenuItem(MenuItem menuItem) throws SQLException {
         Connection con = DriverManager.getConnection(db_url, user, password);
         Statement statement = con.createStatement();
 
         String insert = ""
                 + "INSERT INTO newdb.menu_item "
                 + "(name, ingredients, price, is_recommended, dish_of_the_day) "
-                + "VALUES('"+name+"','"+stringOfIngredients+"',"+price+","+isRecommended+","+dishOfTheDay+");";
+                + "VALUES('"+menuItem.getName()+"','"+menuItem.getStringOfIngredients()+"',"+menuItem.getPrice()+","+menuItem.isRecommended()+","+menuItem.isDishOfTheDay()+");";
         statement.executeUpdate(insert);
         con.close();
     }
