@@ -8,6 +8,10 @@ import java.util.Map;
  */
 public class Restaurant {
 
+    //TODO inserire come input dell'oggetto ristorante un numero per indicare la capienza ristorante
+    //quindi il controllo sarà fatto sulla lunghezza dei tavoli riservati
+    //quando facciamo il check out andiamo a eliminare la coppia dalla mappa
+
     private static Restaurant restaurant = new Restaurant();
     private Map<Table, Reservation> myRestaurant = new HashMap<>();
 
