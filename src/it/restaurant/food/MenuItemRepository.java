@@ -22,12 +22,13 @@ public class MenuItemRepository {
 
         String queryTable = ""
                 + "CREATE TABLE IF NOT EXISTS menu_item ( "
-                + "  menu_id int NOT NULL auto_increment primary KEY, "
+                + "  menu_id int NOT NULL auto_increment, "
                 + "  name varchar(30) DEFAULT NULL, "
                 + "  ingredients varchar(200) DEFAULT NULL, "
                 + "  price double(5,2) DEFAULT NULL, "
                 + "  is_recommended boolean DEFAULT NULL, "
                 + "  dish_of_the_day boolean DEFAULT NULL "
+                + "	CONSTRAINT menu_item_pk PRIMARY KEY (menu_id) "
                 + "  );";
 
         statement.executeUpdate(queryTable);

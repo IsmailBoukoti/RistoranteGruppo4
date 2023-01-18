@@ -18,6 +18,7 @@ public class TableRepository {
                 + "  `initial_seat` int(10) DEFAULT NULL, "
                 + "  `available_seat` int(10) DEFAULT NULL, "
                 + "  `table_status` string(10) DEFAULT NULL, "
+                + "	CONSTRAINT table_pk PRIMARY KEY (table_id) "
                 + ")";
 
         statement.executeUpdate(tableTable);

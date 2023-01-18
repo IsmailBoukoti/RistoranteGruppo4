@@ -19,6 +19,7 @@ public class FixedMenuRepository {
                 + "  `ingredients` varchar(100) DEFAULT NULL, "
                 + "  `dish_type` varchar(20) DEFAULT NULL, "
                 + "  `price` double(5,2) DEFAULT NULL, "
+                + "	CONSTRAINT fixed_menu_pk PRIMARY KEY (dish_id) "
                 + ")";
 
         statement.executeUpdate(fixedMenuTable);

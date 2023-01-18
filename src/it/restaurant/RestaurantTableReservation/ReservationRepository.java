@@ -18,6 +18,7 @@ public class ReservationRepository {
                 + "  `customer_name` varchar(30) DEFAULT NULL, "
                 + "  `reservation_time` double(4,2) DEFAULT NULL, "
                 + "  `required_seat` int(20) DEFAULT NULL, "
+                + "	CONSTRAINT reservation_pk PRIMARY KEY (reservation_id) "
                 + ")";
 
         statement.executeUpdate(reservationTable);
