@@ -7,7 +7,8 @@ import java.sql.Statement;
 
 public class RestaurantRepository {
 
-    public void createTableCustomer() throws SQLException {
+    public void createTableRestaurant() throws SQLException {
+
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Ristorante_Team4", "developer", "Password!");
         Statement statement = con.createStatement();
 
@@ -21,5 +22,6 @@ public class RestaurantRepository {
         statement.executeUpdate(restaurantTable);
 
         con.close();
+        System.out.println("Table restaurant created");
     }
 }

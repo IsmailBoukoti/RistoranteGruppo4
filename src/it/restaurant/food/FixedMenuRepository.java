@@ -7,7 +7,8 @@ import java.sql.Statement;
 
 public class FixedMenuRepository {
 
-    public void createTableCustomer() throws SQLException {
+    public void createTableFixedMenu() throws SQLException {
+
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Ristorante_Team4", "developer", "Password!");
         Statement statement = con.createStatement();
 
@@ -23,5 +24,7 @@ public class FixedMenuRepository {
         statement.executeUpdate(fixedMenuTable);
 
         con.close();
+
+        System.out.println("Table fixed_menu created");
     }
 }

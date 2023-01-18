@@ -16,6 +16,7 @@ public class MenuItemRepository {
 
 
     public void createTableMenuItem() throws SQLException {
+
         Connection con = DriverManager.getConnection(db_url, user, password);
         Statement statement = con.createStatement();
 
